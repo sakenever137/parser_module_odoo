@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <record id="web_parser_cron" model="ir.cron">
+        <field name="name">Blog Post Parser</field>
+        <field name="model_id" ref="model_cron_parser_cron_parser"/>
+        <field name="state">code</field>
+        <field name="code">model._blog_post_update()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="True"/>
+        <field name="doall" eval="False"/>
+    </record>
+</odoo>
